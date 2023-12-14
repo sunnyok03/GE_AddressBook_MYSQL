@@ -13,3 +13,6 @@ CREATE TABLE AddressBook(
     Email varchar(50),
     PRIMARY KEY (FirstName,LastName)
 );
+
+# USE CASE 3
+INSERT INTO AddressBook VALUES ("Sunny","Kumar","M","G","B","123456","0101010001","abcd@gmail.com");

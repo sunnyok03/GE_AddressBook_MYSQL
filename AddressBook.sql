@@ -31,3 +31,6 @@ SELECT * FROM AddressBook WHERE City = "G" OR State = "B";
 SELECT COUNT(*) FROM AddressBook WHERE City = "G";
 SELECT COUNT(*) FROM AddressBook WHERE State = "A";
 
+# USE CASE 8
+SELECT * FROM AddressBook WHERE City = "G" ORDER BY FirstName ASC , LastName DESC;
+

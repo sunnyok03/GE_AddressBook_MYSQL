@@ -19,3 +19,7 @@ INSERT INTO AddressBook VALUES ("Sunny","Kumar","M","G","B","123456","0101010001
 
 # USE CASE 4
 UPDATE AddressBook SET PhoneNumber = "0101010101" WHERE FirstName = "Sunny" AND LastName = "Kumar";
+
+# USE CASE 5
+DELETE FROM AddressBook WHERE FirstName ="Sunny" AND LastName = "Kumar";
+

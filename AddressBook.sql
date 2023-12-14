@@ -34,3 +34,7 @@ SELECT COUNT(*) FROM AddressBook WHERE State = "A";
 # USE CASE 8
 SELECT * FROM AddressBook WHERE City = "G" ORDER BY FirstName ASC , LastName DESC;
 
+# USE CASE 9
+ALTER TABLE AddressBook ADD Type varchar(50);
+SELECT * FROM AddressBook WHERE TYPE = "Family";
+

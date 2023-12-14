@@ -27,3 +27,7 @@ DELETE FROM AddressBook WHERE FirstName ="Sunny" AND LastName = "Kumar";
 # USE CASE 6
 SELECT * FROM AddressBook WHERE City = "G" OR State = "B";
 
+# USE CASE 7
+SELECT COUNT(*) FROM AddressBook WHERE City = "G";
+SELECT COUNT(*) FROM AddressBook WHERE State = "A";
+

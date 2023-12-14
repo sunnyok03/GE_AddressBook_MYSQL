@@ -16,10 +16,14 @@ CREATE TABLE AddressBook(
 
 # USE CASE 3
 INSERT INTO AddressBook VALUES ("Sunny","Kumar","M","G","B","123456","0101010001","abcd@gmail.com");
+INSERT INTO AddressBook VALUES ("Rahul","Kumar","M","G","B","123456","9191919191","efgh@gmail.com");
 
 # USE CASE 4
 UPDATE AddressBook SET PhoneNumber = "0101010101" WHERE FirstName = "Sunny" AND LastName = "Kumar";
 
 # USE CASE 5
 DELETE FROM AddressBook WHERE FirstName ="Sunny" AND LastName = "Kumar";
+
+# USE CASE 6
+SELECT * FROM AddressBook WHERE City = "G" OR State = "B";
 

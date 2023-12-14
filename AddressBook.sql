@@ -38,3 +38,6 @@ SELECT * FROM AddressBook WHERE City = "G" ORDER BY FirstName ASC , LastName DES
 ALTER TABLE AddressBook ADD Type varchar(50);
 SELECT * FROM AddressBook WHERE TYPE = "Family";
 
+# USE CASE 10
+SELECT Type ,COUNT(*) FROM AddressBook GROUP BY Type;
+

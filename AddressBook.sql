@@ -3,8 +3,8 @@ CREATE DATABASE AddresBookService;
 
 # USE CASE 2
 CREATE TABLE AddressBook(
-	FirstName varchar(100),
-    LastName varchar(100),
+	FirstName varchar(100) NOT NULL,
+    LastName varchar(100) NOT NULL,
     Address varchar(200),
     City varchar(50),
     State varchar(50),
@@ -39,5 +39,23 @@ ALTER TABLE AddressBook ADD Type varchar(50);
 SELECT * FROM AddressBook WHERE TYPE = "Family";
 
 # USE CASE 10
-SELECT Type ,COUNT(*) FROM AddressBook GROUP BY Type;
+SELECT Type, COUNT(*) FROM AddressBook GROUP BY Type;
 
+# USE CASE 11
+ALTER TABLE AddressBook DROP COLUMN Type;
+
+
+
+CREATE TABLE Relation(
+	RelationID int PRIMARY KEY AUTO_INCREMENT,
+	FirstName varchar(100) NOT NULL,
+    LastName varchar(100) NOT NULL,
+    Type varchar(50),
+    FOREIGN KEY (FirstName,LastName) REFERENCES AddressBook(FirstName,LastName)
+);
+
+ALTER TABLE Relation AUTO_INCREMENT = 1;
+
+
+INSERT INTO Relation VALUES (1,"Rahul","Kumar","Friend");
+INSERT INTO Relation (FirstName,LastName,Type) VALUES ("Rahul","Kumar","Family");
